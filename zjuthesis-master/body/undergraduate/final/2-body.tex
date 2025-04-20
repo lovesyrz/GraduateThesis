@@ -1,13 +1,142 @@
 \cleardoublepage
 
 \section{记号}
+\begin{enumerate}
+      \item 设$b$是大于等于$2$的正整数，记$x\in[0,1]$以$b$为基数的展开形式为$x=0.x_1x_2\cdots x_n\cdots$，其中$x_i\in\{0,1,\cdots,b-1\}$，也就是说$x=\underset{i=1}{\overset{\infty}{\sum}}x_ib^{-i}$。
+\end{enumerate}
+
+
+
+\section{于汉的研究}
+
+于汉在他的文章《Weak tangent and level set of the Takagi function》一文中介绍了Takagi函数，并证明了在特定参数下Takagi函数的一些性质。
+
+\begin{definition}[Takagi 函数]
+        以下函数称为Takagi函数
+        $$
+            T_{a,b}(x)=\sum_{n=0}^\infty a^nT(b^nx),
+        $$
+        其中，$a<1,b>1,ab\ge1$，且$T:\mathbb{R}\rightarrow\mathbb{R}$是周期为$1$ 的帐篷函数，其在区间$[0,1]$上的定义为，
+        $$
+            T(x)=
+            \begin{cases}
+                x~~~~~~,x\in[0,\frac{1}{2}],\\
+                1-x,x\in[\frac{1}{2},1].
+            \end{cases}
+        $$
+
+        \begin{definition}[Littlewood多项式]
+            称所有系数的取值都在$\{1,-1\}$中的$k$阶多项式为$k$阶Littlewood多项式，即，
+            $$
+                \sum_{n=0}^k\epsilon_nx^n=0,
+            $$
+            其中，$\epsilon_n\in\{1,-1\}$。
+        \end{definition}
+\end{definition}
+
+\subsection{Takagi函数的水平集及其Hausdorff维数}
+
+\begin{definition}[水平集]
+    设函数$f:[0,1]\rightarrow\mathbb{R}$，$\forall y \in\mathbb{R}$，定义函数$f$的水平集为，
+    $$
+        L(y)=\{x\in[0,1]:f(x)=y\}\times\{y\}.
+    $$
+\end{definition}
+
+于汉的第一个结论为，参数$a,b$满足$0<a<1,b>1,2|b,ab\ge1,ab$为$k-1$阶Littlewood多项式的根的Takagi函数具有一个较大的水平集，这个水平集的Hausdorff维数不小于$\frac{1}{k}$。
+
+\begin{proof}
+    由条件，$\exists\epsilon_n\in\{1,-1\},n=0,1,\cdots,k-1$，使得$ab$为以下$k-1$阶Littlewood多项式的根，
+    $$
+        \sum_{n=0}^{k-1}\epsilon_n(ab)^n=0.
+    $$
+
+    取$T_{a,b}(x)$的前$k$项部分和，记为$F_1(x)$，
+    $$
+        F_1(x)=\sum_{n=0}^{k-1}a^nT(b^nx),
+    $$
+    显然，对任意的正整数$m$,$x=mb^{-k}$为$F_1(x)$的不可导点。
+
+    我们有
+    $$
+        \begin{aligned}
+            F_1(1-x) & =\sum_{n=0}^{k-1}a^nT(b^n(1-x))=\sum_{n=0}^{k-1}a^nT(b^n-b^nx) \\
+                   & =\sum_{n=0}^{k-1}a^nT(1-b^nx)=\sum_{n=0}^{k-1}a^nT(b^nx)=F_1(x).
+        \end{aligned}
+    $$
+    故$F_1(x)$关于直线$x=\frac{1}{2}$对称。
+
+    对$F_1(x)$求导，可得
+    $$
+        F_1'(x)=\sum_{n=0}^{k-1}(ab)^nT'(b^nx).
+    $$
+
+    我们记$\epsilon_n(x)=T'(b^nx)$，则
+    $$
+        F_1'(x)=\sum_{n=0}^{k-1}\epsilon_n(x)(ab)^n,
+    $$
+    其中，$\epsilon_n(x)\in\{1,-1\}$，其取值取决于$x$以$b$为基数的展开式。若$x$以$b$为基数的展开式为
+    $$
+        x=0.x_1x_2\cdots
+    $$
+    由于$T(x)$周期为$1$，其导数的周期也为$1$，故有
+    $$
+        T'(b^nx)=T'(x_1x_2\cdots x_n.x_{n+1}\cdots x_k\cdots)=T'(0.x_{n+1}\cdots x_k\cdots),n=0,1,\cdots,k-1.
+    $$
+    则有
+    $$
+        \epsilon_n(x)=
+        \begin{cases}
+            1,x_{n+1}\in[0,\frac{b}{2}),\\
+            -1,x_{n+1}\in[\frac{b}{2},b),
+        \end{cases},n=0,1,\cdots,k-1.
+    $$
+
+    因此，我们可以找到$b_1,b_2,\cdots,b_k$并令$x_i=b^1_i,i=1,2,\cdots,k$，即可使$\epsilon_n(x)=\epsilon_n,n=0,1,\cdots,k-1$，从而有
+    $$
+        F_1'(x)=\sum_{n=0}^{k-1}\epsilon_n(x)(ab)^n=\sum_{n=0}^{k-1}\epsilon_n(ab)^n=0.
+    $$
+    此时，我们仅改变$b_k$的取值，若$b_k<\frac{b}{2}$，则令其取遍$[0,\frac{b}{2})$，反之则取遍$[\frac{b}{2},b)$，则我们得到了$\frac{b}{2}$个长度为$\frac{1}{b^k}$的区间，其为被仅挖去了点$x=mb^{-k}$的连续区间，故在这些区间上，我们得到$F_1'(x)=0$，存在$a_1\in\mathbb{R}$，使得$F_1(x)=a_1$。
+
+    因为$\underset{n=0}{\overset{k-1}{\sum}}\epsilon_n(ab)^n=0$，则有$\underset{n=0}{\overset{k-1}{\sum}}(-\epsilon_n)(ab)^n=0$。
+    又因为$F_1(x)$关于直线$x=\frac{1}{2}$对称，故我们可以找到与上述$\frac{b}{2}$个区间一一对称的$\frac{b}{2}$个区间，在这些区间上$\epsilon_n(x)=-\epsilon_n$，且有$F_1(x)=a_1$。
+
+    至此，我们找到了$b$个长度为$\frac{1}{b^k}$的区间，由此，我们可以得到一个$F_1(x)$的水平集。
+
+    取Takagi函数的第二个$k$项部分和，记为$F_2(x)$
+    $$
+        F_2(x)=\sum_{n=k}^{2k-1}a^nT(b^nx)=\sum_{n=0}^{k-1}a^k\cdot a^nT(b^n\cdot b^kx)=a^kF_1(b^kx).
+    $$
+    不难看出，存在$b_{k+1},b_{k+2},\cdots,b_{2k}$并令$x_i=b_i,i=k+1,\cdots,2k$，即可使$F_2'(x)=(ab)^kF_1'(b^kx)=0$，即存在$a_2\in\mathbb{R}$，使得$F_2(x)=a_2$。
+
+    同上，我们令$b_{2k}$取遍它所在的一半区间，并加上与这些区间对称的区间。再将前$k$个$x_i$的取值继承下来，这样，我们就得到了$b^2$个长度为$\frac{1}{b^{2k}}$的区间，这可以构成$F_1(x)+F_2(x)$的一个水平集。
+
+    不断重复上述过程，不难得到，在第$m$次迭代时，我们可以构造出以下区间
+    $$
+        L_m=\{x:x=0.b_1b_2\cdots b_kb_{k+1}\cdots b_{2k}\cdots b_{(m-1)k+1}\cdots b_{mk}x_{mk+1}\cdots\}
+    $$
+    使得$\forall x\in L_m$，有$T'(b^nx)=\epsilon_{N(n)}$，或$T'(b^nx)=-\epsilon_{N(n)},n=1,2,\cdots,mk$其中，$N(n)=n(\mathrm{mod}~b)$。
+
+    这样，我们得到了$b^m$个长度为$\frac{1}{b^mk}$的区间，在这些区间上，$\exists y_m\in\mathrm{R}$，使得，$\underset{n=1}{\overset{m}{\sum}}F_n(x)=y_m$由此，我们可以构造水平集$L_m(y_m)$
+
+    $$
+        L_m(y_m)=\{(x,y_m):x\in L_m\}.
+    $$
+
+
+\end{proof}
+
+\subsection{Takagi函数图像的Assouad维数}
+
+
+\section{类Takagi函数的结论}
 
 \begin{enumerate}
-      \item 我们记$x\in[0,1]$以$b$为基数的展开形式为$x=0.x_1x_2\cdots x_n\cdots$，其中$x_i\in\{0,1,\cdots,b-1\}$，也就是说$x=\underset{i=1}{\overset{\infty}{\sum}}x_ib^{-i}$。
+
       \item 对区间$I$，我们用$|I|$表示区间的长度。
       \item 给定区间族$\mathbb{I}=\{I_1,I_2,\cdots,I_N\}$，若$\forall i,j,\frac{|I_i|}{|I_j|}\in\mathbb{Q}$，则定义
       $$
-            gcd(\mathbb{I})=\sup\{T:\frac{|I_i|}{T}\in\mathbb{Z},i=1,2,\cdots,N\}.
+            \gcd(\mathbb{I})=\sup\big\{T:\frac{|I_i|}{T}\in\mathbb{Z},i=1,2,\cdots,N\big\}.
       $$
       \item 对区间族$\mathbb{I}$中的区间$I_i$，我们定义
       $$
@@ -58,13 +187,13 @@ $$
 \subsubsection{Hausdorff维数}
 对集合$F$，其Hausdorff维数为
 $$
-      \mathrm{\dim_H}F=\sup\{s:\forall\delta>0,\exists\{U_i\}_{i=1}^\infty,\mbox{使得}\bigcup_{i=1}^\infty U_i\supset F,\mbox{且}\sum_{i=1}^\infty (\mathrm{diam}~U_i)^s<\delta\}.
+      \mathrm{\dim_H}F=\inf\{s:\forall\delta>0,\exists\{U_i\}_{i=1}^\infty,\mbox{使得}\bigcup_{i=1}^\infty U_i\supset F,\mbox{且}\sum_{i=1}^\infty (\mathrm{diam}~U_i)^s<\delta\}.
 $$
 
 \subsubsection{Assouad维数}
 对集合$F$，其Assouad维数为
 $$
-      \mathrm{\dim_A}F=\sup\{s:(\exists C>0)(\forall R>0)(\forall r\in(0,R))(\forall x\in F),N_r(B(x,R)\cap F)\le C\Big(\frac{R}{r}\Big)^s\}.
+      \mathrm{\dim_A}F=\inf\{s:(\exists C>0)(\forall R>0)(\forall r\in(0,R))(\forall x\in F),N_r(B(x,R)\cap F)\le C\Big(\frac{R}{r}\Big)^s\}.
 $$
 
 \section{结论}
@@ -245,24 +374,88 @@ $$
       $$
 \end{lemma}
 
-其详细证明可查看[1,第六节]
+其详细证明可查看[1,第六节]。
 
 \begin{lemma}
-      假设$T_a,b(x)=\sum_{n=0}^\infty a^nT(b^nx)$满足以下条件
+      假设$T_{a,b}(x):\mathbb{R}\rightarrow\mathbb{R}$为以下形式的函数：
+      $$
+            T_{a,b}(x)=\sum_{n=0}^\infty a^nT(b^nx),
+      $$
+      其中，$T(x):\mathbb{R}\rightarrow\mathbb{R}$是周期为1的$\mathcal{C}^1$连续函数，且$a>0,b>0,ab>1$。若以下两个条件成立：
+      \begin{enumerate}
+          \item 存在一个常数$C_1>0$，使得，对任意的正整数$M>0$，存在一个正整数$k$使得$J_k=(\frac{k}{b^{M+1}},\frac{k+1}{b^{M+1}})$，且$\forall x_1,x_2\in J_k$，以下不等式成立
+          $$
+                |\sum_{n=0}^Ma^nT(b^nx_1)-\sum_{n=0}^Ma^nT(b^nx_2)|<C_1|x_1-x_2|.
+          $$
+          \item 存在一个水平集$L\subset[0,1]$，其下盒维数不小于$D$，即
+          $$
+                \exists y\in\mathbb{R},\underline{\mathrm{\dim_B}}L(y)=\underline{\mathrm{\dim_B}}\{x\in[0,1]:T_{a,b}(x)=y\}\ge D。
+          $$
+      \end{enumerate}
+      则有以下结论
+      $$
+        \mathrm{\dim_A\Gamma_{T_{a,b}(x)}}\ge D+1.
+      $$
 \end{lemma}
 
+上述结论的证明请参见[1,第六节]。
 
 假设$H_{a,b}(x)=\sum_{n=0}^\infty a^nh(b^nx)$，其中$h(x)$为可分割折线函数，
-$\mathbb{I}=\{I_1,I_2,\cdots,I_N\}$为$h(x)$在$[0,1]$区间上按不可导点分割产生的区间族，
+$\mathbb{I}=\{I_1,I_2,\cdots,I_N\}$为$h(x)$在$[0,1]$区间上按$h(x)$的不可导点分割产生的区间族，
 其中$I_1,\cdots,I_N$从左到右排列。
 
 $I_J^*$为$h(x)$在$[0,1]$区间上的导数不为$0$的区间长度最大的区间，其上$h(x)$的导数为$K_{J^*}$。
 
-$0<a<1,b>1,1<ab<2,n(\mathbb{I})|b$，且$ab$为$k-1$阶Littlewood多项式的根，则我们可得以下结论：
+假设$0<a<1,b>1,1<ab<2,n(\mathbb{I})|b$，且$ab$为$k-1$阶Littlewood多项式的根，则我们可得以下结论：
+
 $$
       \mathrm{\dim_A\Gamma_{H_{a,b}(x)}}\ge1+\frac{1}{k}\Big(1+\log_b2|I_J|\Big).
 $$
 
 \begin{proof}
 
+    先证明$H_{a,b}(x)$满足引理3中的第一个条件，即，
+
+    若$a,b$满足，$0<a<1,b\ge2,n(\mathbb{I})|b,1<ab<2$，则有 $\exists C_1>0$，
+    $\forall M>0,\exists k\in\mathbb{Z}^+$，使得$\forall x_1,x_2\in [\frac{k}{b^M},\frac{k+1}{b^M}]$，有
+
+    $$
+    |\sum_{n=0}^Ma^nh(b^nx_1)-\sum_{n=0}^Ma^nh(b^nx_2)|<C_1|x_1-x_2|.
+    $$
+
+    对任意的整数$M>0$，我们考虑第$M$级区间，并记其中第$k+1$个区间为
+
+    $$
+    I_M(k)=\big[\frac{k}{2b^M},\frac{k+1}{2b^M}\big],k\in\mathbb{Z}.
+    $$
+
+    由于我们取的$b$一定为整数，$I_M(k)$可被分为$b$个区间，因此，我们有以下结论
+
+    $$
+    h'(b^Mx)=\begin{cases}
+        K_{J^*},~~x\in I_M(k),k (\mathrm{mod}b) \in {[}\frac{b}{n(\mathbb{I})}\sum_{i=0}^{J^*-1}n(I_i),\frac{b}{n(\mathbb{I})}\sum_{i=0}^{J^*}n(I_i){)},\\
+        -K_{J^*},~~x\in I_M(k),k(\mathrm{mod}b) \in {[}\frac{b}{n(\mathbb{I})}\sum_{i=0}^{N-J^*}n(I_i),\frac{b}{n(\mathbb{I})}\sum_{i=0}^{N+1-J^*}n(I_i){)}.
+    \end{cases}
+    $$
+
+    我们记$\epsilon_n=\frac{1}{K_{J^*}}h'(b^nx),n=0,1,\cdots,M$。
+
+    因此，$\forall M>0$我们可以找到一列区间$I_M(k_M)\subset I_{M-1}(k_{M-1})\subset\cdots\subset I_1(k_1)$，使得
+
+    $$
+    D_M(x)=\sum_{n=0}^Ma^n(h(b^nx))'=\sum_{n=0}^M(ab)^nh'(b^nx)=K_{J^*}\sum_{n=0}^M\epsilon_n(ab)^n.
+    $$
+
+    由引理1可知，$D_M(x)$有界，故$\forall M>0,\exists k\in\mathbb{Z}^+$，使得$\forall x_1,x_2\in [\frac{k}{b^M},\frac{k+1}{b^M}]$，有
+
+    $$
+    |\sum_{n=0}^Ma^nh(b^nx_1)-\sum_{n=0}^Ma^nh(b^nx_2)|<C_1|x_1-x_2|.
+    $$
+
+    由结论4.1，$H_{a,b}(x)$存在一个水平集$L$，其Hausdorff维数不小于$\frac{1}{k}\Big(1+\log_b\2|I_{J^*}|\Big)$，故有$\mathrm{\dim_B}L\ge\mathrm{\dim_H}L\ge\frac{1}{k}\Big(1+\log_b\2|I_{J^*}|\Big)$。
+
+    由此，$H_a,b(x)$满足引理3中的两个条件，故有
+    $$
+        \mathrm{\dim_A\Gamma_{H_{a,b}(x)}}\ge1+\frac{1}{k}\big(1+\log_b2|I_{J^*}|\big).
+    $$
 \end{proof}
