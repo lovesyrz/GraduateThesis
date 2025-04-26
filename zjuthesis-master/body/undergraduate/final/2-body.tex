@@ -30,7 +30,7 @@
             $$
                 \sum_{n=0}^k\epsilon_nx^n=0,
             $$
-            其中，$\epsilon_n\in\{1,-1\}$。
+            其中，$\epsilon_n\in\{1,-1\},n=0,1,\cdots,k$。
         \end{definition}
 \end{definition}
 
@@ -40,6 +40,13 @@
     设函数$f:[0,1]\rightarrow\mathbb{R}$，$\forall y \in\mathbb{R}$，定义函数$f$的水平集为，
     $$
         L(y)=\{x\in[0,1]:f(x)=y\}\times\{y\}.
+    $$
+\end{definition}
+
+\begin{definition}[Hausdorff维数]
+    集合$F$的Hausdorff维数定义如下：
+    $$
+        \mathrm{dim_H}F=\inf\Big\{s:\forall \delta>0,\exists\{U_i\}_{i=1}^\infty,\mbox{使得}\bigcup_{i=1}^\infty U_i\supset F,\mbox{且}\sum_{1}^{\infty}(\mathrm{diam}U_i)^s\le\delta\Big\}.
     $$
 \end{definition}
 
@@ -117,12 +124,29 @@
     $$
     使得$\forall x\in L_m$，有$T'(b^nx)=\epsilon_{N(n)}$，或$T'(b^nx)=-\epsilon_{N(n)},n=1,2,\cdots,mk$其中，$N(n)=n(\mathrm{mod}~b)$。
 
-    这样，我们得到了$b^m$个长度为$\frac{1}{b^mk}$的区间，在这些区间上，$\exists y_m\in\mathrm{R}$，使得，$\underset{n=1}{\overset{m}{\sum}}F_n(x)=y_m$由此，我们可以构造水平集$L_m(y_m)$
+    这样，我们得到了$b^m$个长度为$\frac{1}{b^{mk}}$的区间，在这些区间上，$\exists y_m\in\mathrm{R}$，使得，$\underset{n=1}{\overset{m}{\sum}}F_n(x)=y_m$由此，我们可以构造水平集$L_m(y_m)$
 
     $$
         L_m(y_m)=\{(x,y_m):x\in L_m\}.
     $$
 
+    而这个水平集$L_m(y_m)$的Hausdorff维数$s$满足
+    $$
+        \exists \{U_i\}_{i=1}^{b^m},\forall i,\mathrm{diam}U_i=\frac{1}{b^{mk}},\mbox{使得},\bigcup_{i=1}^{b^m}U_i\supset L_m(y_m).
+    $$
+    则$\forall \delta>0$，
+    $$
+        \sum_{i=1}^{b^m}\big(\mathrm{diam}U_i\big)^s<\delta,\\
+        b^{m}\cdot b^{-mks}<\delta.
+    $$
+    当我们令$m\rightarrow\infty$时，我们就能得到Takagi函数的水平集$L_T(y)$，则其Hausdorff维数$\mathrm{\dim_H}L_T(y)$满足$\forall\delta>0$，
+    $$
+        \lim\limits_{m\rightarrow\infty}\big(b^{1-k\mathrm{\dim_H}L_T(y)}\big)^{m}<\delta,
+    $$
+    即，
+    $$
+        b^{1-k\mathrm{\dim_H}L_T(y)}<1\Rightarrow \mathrm{\dim_H}L_T(y)>\frac{1}{k}.
+    $$
 
 \end{proof}
 
