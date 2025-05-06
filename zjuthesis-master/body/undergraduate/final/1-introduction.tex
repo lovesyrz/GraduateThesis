@@ -1,7 +1,81 @@
 \cleardoublepage
-
 \section{绪论}
 
-\subsection{背景}
+\subsection{研究背景、目的与意义}
 
-\subsubsection{节标题}
+分形几何学源于19世纪末和20世纪初，研究具有自相似性和复杂结构的几何对象。20世纪70年代，Benoît B. Mandelbrot提出“分形”概念，奠定了分形几何学的理论基础。分形函数是分形几何学的重要研究对象，这类函数通常具有自相似性、不可微性以及复杂的局部和全局结构。经典的分形函数如Weierstrass函数、Takagi函数等，在数学上具有独特性质。分形函数研究不仅有助于深入理解数学分析中的一些基本概念和定理，如连续性、可微性等，还为研究自然界中的复杂现象提供模型。例如，在地理学中，海岸线的形状可以用分形函数来描述；在物理学中，某些物理量的分布也表现出分形特性。因此，分形函数的研究具有重要的理论意义和实际应用价值。
+
+分形函数的水平集是指函数取相同值的所有点的集合。水平集的研究在分形几何学中具有重要地位，它可以帮助我们更好地理解分形函数的结构和性质。近年来，随着分形几何学的不断发展，分形函数水平集的研究也取得了许多重要成果。例如，对于经典的Takagi函数，于汉在其文章《Weak tangent and level sets of Takagi functions》\cite{10}中，对该函数的水平集进行了研究，揭示了其水平集在某些特定情况下的维数性质以及弱切线的存在性等重要结论。这些研究成果不仅丰富了分形函数水平集理论的研究内容，也为后续相关研究提供了宝贵的思路和方法借鉴。然而，目前对于分形函数水平集的研究仍然存在许多未解决的问题，例如对于更广泛的分形函数类，其水平集的精确维数计算、水平集的拓扑结构以及水平集之间的相互关系等，这些问题都需要进一步深入研究。
+
+本研究聚焦于一类广义Takagi函数，旨在拓展和深化于汉在《Weak tangent and level sets of Takagi functions》中关于Takagi函数的研究成果。Takagi函数作为经典的分形函数，其水平集的性质在分形几何学中具有重要的理论价值。通过研究这类分形函数的水平集，可以进一步揭示其在不同参数条件下的维数特征、拓扑结构以及与其他数学对象的关系。此外，Allaart和Kawamura在《The Takagi function: a survey》\cite{1}中对Takagi函数进行了全面的综述，总结了其在不同领域的应用和理论研究进展。这些研究为分形函数水平集的进一步研究奠定了坚实的基础。同时，Baker和Yu在《Root sets of polynomials and power series with finite choices of coefficients》\cite{2}中研究了多项式和有限系数幂级数的根集，为分形函数的研究提供了新的视角。Bandt在《On the Mandelbrot set for pairs of linear maps》\cite{3}中探讨了Mandelbrot集对线性映射对的性质，为分形几何学的研究提供了重要的理论支持。
+
+% 8-3, 9-4
+本研究的开展具有理论意义和实际应用价值。从理论角度来看，本研究将进一步丰富和完善分形函数水平集理论体系。从实际应用角度来看，研究成果有望在图像处理、信号分析等领域得到应用，为相关领域的研究和实践提供理论支持和参考。
+
+\subsection{国内外研究现状}
+
+分形几何学的理论基础主要由Mandelbrot等人奠定，其研究重点在于分形的自相似性、维数理论等方面。在分形函数水平集的研究中，Takagi函数作为经典的分形函数，受到了广泛关注。于汉在《Weak tangent and level sets of Takagi functions》中，对该函数的水平集进行了研究，揭示了其水平集在某些特定情况下的维数性质以及弱切线的存在性等重要结论。这些研究成果不仅丰富了分形函数水平集理论的研究内容，也为后续相关研究提供了宝贵的思路和方法借鉴。此外，Allaart和Kawamura在《The Takagi function: a survey》中对Takagi函数进行了全面的综述，总结了其在不同领域的应用和理论研究进展。这些研究为分形函数水平集的进一步研究奠定了坚实的基础。
+%3-5,4-6,10-7
+Fraser在其著作《Assouad dimension and fractal geometry》\cite{9}中，系统地研究了Assouad维数及其在分形几何中的应用。这些研究成果为分形函数水平集的维数理论提供了重要的理论支持。Falconer的《Fractal geometry: Mathematical foundations and applications》\cite{7}第三版，进一步完善了分形几何学的理论体系，为分形函数的研究提供了全面的理论基础。同时，Bara\'nski在《Dimension of the Graphs of the Weierstrass-Type Functions》\cite{4}中研究了Weierstrass型函数图像的维数，为分形函数的研究提供了重要的参考。
+
+国内学者在分形函数的理论研究和应用方面进行了大量工作，特别是在分形函数水平集的研究中，不仅关注其理论性质，还积极探索其在实际问题中的应用价值。这些研究为分形函数水平集的进一步研究奠定了坚实的基础。
+
+尽管已有研究取得了重要成果，但仍存在许多未解决的问题。例如，对于更广泛的分形函数类，其水平集的精确维数计算、水平集的拓扑结构以及水平集之间的相互关系等，这些问题都需要进一步深入研究。本研究通过运用分形几何学中的维数理论和拓扑学的相关理论和方法，对一类广义Takagi函数的水平集性质进行了分析，并得出了一定的结论。
+
+\subsection{研究的主要内容}
+
+本研究聚焦于一类广义Takagi函数，具体定义为：
+
+\[
+H_{a,b}(x) = \sum_{n=0}^\infty a^n h(b^n x).
+\]
+其中 \( h(x) \) 是周期为 \( 1 \)，且关于直线 \( x = \frac{1}{2} \) 对称的分段线性连续函数，\( a \) 和 \( b \) 满足 \( 0 < a < 1 \)，\( b > 1 \)，\( 1 < ab < 2 \)。
+
+我们将研究这类分形函数水平集的Hausdorff维数和函数图像的Assouad维数，探讨其在特定参数条件下，这两个维数的下界估计。具体的研究方法如下：
+
+\begin{enumerate}
+      \item 数学模型构建：构建数学模型，详细分析分形函数的自相似性、不可微性等基本特性，并探讨这些特性对水平集性质的影响。
+      \item 维数理论应用：运用分形几何学中的维数理论，如盒维数、Hausdorff维数和Assouad维数等，研究水平集的维数特征。相关理论基础可参考Fraser的《Assouad dimension and fractal geometry》以及Falconer的《Fractal geometry: Mathematical foundations and applications》。
+      \item 拓扑学方法：利用拓扑学中的相关理论和方法，探讨水平集的拓扑结构。
+\end{enumerate}
+
+\subsection{记号}
+以下为本文中常用的记号，
+\begin{enumerate}
+      \item 设$b$是大于等于$2$的正整数，记$x\in[0,1]$以$b$为基数的展开形式为$x=0.x_1x_2\cdots x_n\cdots$，其中$x_i\in\{0,1,\cdots,b-1\}$，也就是说$x=\underset{i=1}{\overset{\infty}{\sum}}x_ib^{-i}$。
+      \item $\forall a\in\mathbb{R}^2,R>0,S(a,R)$表示以$a$为中心，边长为$2R$的正方形,$B(a,R)$表示以$a$为球心，半径为$R$的球。
+      \item 对集合$F$，$N_r(F)$表示以半径为$r$的球对$F$进行覆盖所需的最小覆盖数。
+      \item 对集合$F$，记$N\big(F\cap S(a,R),r\big)$为其相邻正方形覆盖数，即为：
+      $$
+      \Big|\Big\{(i,j)\in\mathbb{Z}^2\cap\big[0,\lfloor\frac{R}{r}\rfloor\big]^2:\\
+      S\big((a-\frac{R}{2}+\frac{r}{2}+ir,a-\frac{R}{2}+\frac{r}{2}+jr),r\big)\cap F\neq\emptyset\Big\}\Big|.
+      $$
+      其中，$\lfloor x \rfloor$表示不超过$x$的最大整数。
+
+      由于$\exists C>0$，使得$C^{-1}N_r\big(F\cap B(a,R)\big)\le N\big(F\cap S(a,R),r\big)\le CN_r\big(F\cap B(a,R)\big)$，在本文中我们用更方便的相邻正方形覆盖数替代球覆盖数。
+
+      \item 对区间$I$，我们用$|I|$表示区间的长度。
+      \item 给定区间族$\mathbb{I}=\{I_1,I_2,\cdots,I_N\}$，若$\forall i,j,\frac{|I_i|}{|I_j|}\in\mathbb{Q}$，则定义
+      $$
+      \gcd(\mathbb{I})=\sup\big\{T:\frac{|I_i|}{T}\in\mathbb{Z},i=1,2,\cdots,N\big\}.
+      $$
+      对区间族$\mathbb{I}$中的区间$I_i$，定义
+      $$
+      n(I_i)=\frac{|I_i|}{gcd(\mathbb{I})},i=1,2,\cdots,N.
+      $$
+      显然，对任意的$1\le i\le N,n(I_i)\in\mathbb{Z}$。
+      定义$n(\mathbb{I})=\sum_{i=1}^Nn(I_i)$不难得
+      $$|I_i|=\frac{n(I_i)}{n(\mathbb{I})}\sum_{j=1}^N|I_j|$$
+
+\end{enumerate}
+
+\subsection{主要成果及论文结构}
+
+本研究的主要成果为：
+
+\begin{enumerate}
+      \item 证明了在特定条件下，广义Takagi函数的水平集具有明确的Hausdorff维数下界。
+      \item 推导了该类分形函数图像的Assouad维数的下界，进一步完善了对该类函数整体性质的认识。
+\end{enumerate}
+
+本文的结构如下。第二章介绍了于汉对Takagi函数的研究以及他得到的结论。第三章将于汉的研究方法运用到一类广义Takagi函数上，得到了这类函数的部分性质。第四章总结本研究的主要内容，指出了本研究的不足指出，并对未来的研究提出方向和建议，为后续的研究提供参考。

@@ -10,16 +10,16 @@
       \begin{itemize}
             \item \textbf{Hausdorff维数}：Hausdorff维数是通过Hausdorff测度来定义的，它考虑了覆盖集合所需的最小直径的幂次和的下确界。对于一个集合\(F\)，其Hausdorff维数定义为：
             \[
-            \dim_H F = \inf \left\{ s \geq 0 : \forall \delta > 0, \exists \{U_i\}_{i=1}^\infty \text{ such that } \sum_{i=1}^\infty \text{diam}(U_i)^s < \delta \right\}
+            \dim_H F = \inf \left\{ s \geq 0 : \forall \delta > 0, \exists \{U_i\}_{i=1}^\infty \text{ such that } \sum_{i=1}^\infty \text{diam}(U_i)^s < \delta \right\}.
             \]
             \item \textbf{盒维数}：盒维数是通过覆盖集合所需的最小盒子数来定义的。对于一个集合\(F\)，其盒维数定义为：
             \[
-            \dim_B F = \lim_{r \to 0} \frac{-\log N_r(F)}{\log r}
+            \dim_B F = \lim_{r \to 0} \frac{\log N_r(F)}{-\log r}.
             \]
             其中\(N_r(F)\)是覆盖集合\(F\)所需的最小盒子数。
             \item \textbf{Assouad维数}：Assouad维数是通过覆盖集合所需的最小盒子数和盒子大小的比值来定义的。对于一个集合\(F\)，其Assouad维数定义为：
             \[
-            \dim_A F = \inf \left\{ s \geq 0 : \exists C > 0 \text{ such that } \forall R > 0, \forall r \in (0, R), \forall x \in F, N_r(B(x, R) \cap F) \leq C \left( \frac{R}{r} \right)^s \right\}
+            \dim_A F = \inf \left\{ s \geq 0 : \exists C > 0 \text{ such that } \forall R > 0, \forall r \in (0, R), \forall x \in F, N_r\big(B(x, R) \cap F\big) \leq C \left( \frac{R}{r} \right)^s \right\}.
             \]
       \end{itemize}
       \item \textbf{维数性质的变化规律}

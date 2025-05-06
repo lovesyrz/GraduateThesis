@@ -2,11 +2,11 @@
 
 \newrefsection
 
-\newtheorem{theorem}{定理}[section]
+
 \newtheorem{remark}[theorem]{评注}
-\newtheorem{lemma}[theorem]{引理}
+
 \newtheorem{question}[theorem]{问题}
-\newtheorem{definition}[theorem]{定义}
+
 \newtheorem{theoremno}{定理}
 \newcommand{\Hdim}{\mathrm{\dim_H}}
 \newcommand{\Adim}{\mathrm{\dim_A}}
@@ -30,7 +30,7 @@ T_{a,b}(x)=\sum_{n=0}^\infty a^nT(b^nx),
 $$
 其中,$a,b$是满足$a<1,b>1,ab>1$的实参数,$T:\mathbb{R}\rightarrow\mathbb{R}$是周期为1,在单位区间内如下定义的帐篷函数,
 $$
-T(x)=\begin{cases}x~~~~~~~x\in[0,\frac{1}{2}] \\ 1-x~~x\in[\frac{1}{2},1].\end{cases}
+T(x)=\begin{cases}x~~~~~~~x\in[0,\frac{1}{2}], \\ 1-x~~x\in[\frac{1}{2},1].\end{cases}
 $$
 这样的函数$T_{a,b}$就称为Takagi函数。最开始,Takagi函数指的是$T_{\frac{1}{2},2}$,
 但是我们称$T_{a,b}$为Takagi函数也不会产生异议。
@@ -53,7 +53,7 @@ $$
       $$
       \sum_{n=0}^{k-1}\epsilon_n(ab)^n.
       $$
-      其中,序列$\{\epsilon_n\}_{n\in\{0,\cdots,k-1\}}$取自$\{-1,1\}$。
+      其中序列$\{\epsilon_n\}_{n\in\{0,\cdots,k-1\}}$取自$\{-1,1\}$。
       此外,如果$b$是一个大于$2$的整数,则我们有以下结论,
       $$
       \Adim\Gamma_{T_{a,b}}\ge1+\frac{1}{k}.
@@ -65,7 +65,7 @@ $$
       $$
       \Adim^{1/B}\Gamma_{T_{a,b}}\ge1+\frac{1}{k},
       $$
-      其中,$B=\frac{\ln(ab^2)}{\ln b}$,$\Adim^{1/B}$是参数为$1/B$的Assouad频谱。
+      其中$B=\frac{\ln(ab^2)}{\ln b}$,$\Adim^{1/B}$是参数为$1/B$的Assouad频谱。
 \end{remark}
 
 在本文中,我们仅关注Assouad维数。有关Assouad频谱的更多详情,请参见[10]。
@@ -79,7 +79,7 @@ $\Adim\Gamma_{T_{a,b}}\ge\frac{4}{3}$。
 \begin{lemma}[弱切]
       设$a,b$如定理$1.1$所述,则存在$\Gamma_{T_{a,b}}$的一个弱切$E$,使得
       $$
-      \Hdim E=\Adim\Gamma_{T_{a,b}}\ge\overline{\Bdim}\Gamma_{T_{a,b}}.
+      \Hdim E=\Adim\Gamma_{T_{a,b}}\ge\overline{\Bdim}\Gamma_{T_{a,b}},
       $$
       最右侧的不等式可以是严格的。
 \end{lemma}
@@ -103,7 +103,7 @@ $\Adim\Gamma_{T_{a,b}}\ge\frac{4}{3}$。
       设$L$是代数整数的集合,这些代数整数是Littlewood多项式的根,即$x\in\mathbb{C}$
       并存在整数$k\ge1$和一个有限序列$\epsilon_n\in\{\pm1\},n\in\{0,1,\cdots,k-1\}$使得
       $$
-      \sum_{n=0}^{k-1}\epsilon_nx^n=0.
+      \sum_{n=0}^{k-1}\epsilon_nx^n=0,
       $$
       则$L\cap[\frac{1}{2},2]$在$[\frac{1}{2},2]$中稠密。
 \end{theoremno}
@@ -162,14 +162,14 @@ $$
 \subsection{上盒维数}
 $F$的上盒维数是
 $$
-\overline{\Bdim}F= \lim\limits_{r\rightarrow0} \sup\big(-\frac{\log N_r(F)}{\log r}\big).
+\overline{\Bdim}F= \lim\limits_{r\rightarrow0} \sup\big(\frac{\log N_r(F)}{-\log r}\big).
 $$
 \subsection{Assouad维数和弱切}
 $F$的Assouad维数是
 $$
 \begin{aligned}
       \Adim F=&\inf\{s\ge0:(\exists C>0)(\forall R>0)(\forall r\in(0,R))(\forall x\in F)\\
-      &N_r(B(x,R)\cap F)\le C\Big(\frac{R}{r}\Big)^s\}.
+      &N_r\big(B(x,R)\cap F\big)\le C\Big(\frac{R}{r}\Big)^s\}.
 \end{aligned}
 $$
 其中$B(x,R)$表示以$x$为球心,$R$为半径的闭合球。
@@ -180,7 +180,7 @@ $$
       设$X\in\mathcal{K}(\mathbb{R}^n)$是一个固定的参考集（通常是闭合的单位球或立方体）
       并设$E,F\subset\mathbb{R}^n$是紧集。
       假设存在一列相似映射$T_k:\mathbb{R}^n\rightarrow\mathbb{R}^n$使得
-      当$k\rightarrow0$时$d_\mathcal{H}(E,T_k(F)\cap X)\rightarrow0$。
+      当$k\rightarrow0$时$d_\mathcal{H}\big(E,T_k(F)\cap X\big)\rightarrow0$。
       则$E$称为$F$的一个弱切。
 \end{definition}
 
@@ -203,7 +203,7 @@ $$
       $$
       换言之,我们有
       $$
-      \Adim F=\max\{\Hdim E:E~\mathrm{is~a~weak~tangent~of}~F \}.
+      \Adim F=\max\{\Hdim E:E\mbox{是}F\mbox{的弱切} \}.
       $$
 \end{theorem}
 \subsection{由不相邻的立方体覆盖}
@@ -254,7 +254,7 @@ $$
       因此引理$4.3$中仅有第二个性质是对的。
 \end{remark}
 
-\section{大型水平集,定理1.4的证明}
+\section{大的水平集,定理1.4的证明}
 
 我们证明具有特定参数$a,b,$的函数$T_{a,b}$存在大型水平集。
 因为$ab$是Littlewood多项式的一个根,我们可以得到
