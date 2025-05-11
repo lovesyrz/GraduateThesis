@@ -1,0 +1,164 @@
+%
+% 使用 xelatex 编译
+%
+\documentclass[10pt,compress,t,fontset=none]{ctexbeamer}
+\usetheme{Warsaw}
+\usefonttheme[onlymath]{serif}
+
+%修改字体为文泉驿字体
+
+%%%%% ===== 常用宏包 =======================================================
+\usepackage{amsmath,amssymb,amsfonts,bm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+
+\begin{document}
+
+\title[LISA Pathfinder检验质量释放控制仿真]{LISA Pathfinder检验质量释\\ 释放控制的MATLAB仿真}
+% \subtitle{也可以有个副标题
+
+\author[陈欣彤]{陈欣彤}
+
+\institute[SPA.SYSU]{\zihao{5} 中山大学-物理与天文专业}
+
+\date[2020.5]{2020年5月}
+
+
+\begin{frame}
+\begin{center}
+\Huge\bfseries 本科毕业论文答辩
+\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+\begin{frame}{内容提要}
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+\section{课题背景}
+
+% 在每节前插入目录
+\AtBeginSection[]{\frame{\tableofcontents[currentsection,hideallsubsections]}}
+
+\begin{frame}
+  \frametitle{课题背景}
+\begin{itemize}
+\item 考虑问题
+    $$ a^2+b^2=c^2.$$
+
+\bigskip
+\item
+\uncover<2>{
+ 问题应用背景
+    \begin{itemize}
+        \item  xxxxx
+        \item  xxxx
+        \item  xxxxx
+        \item $\cdots\ \cdots$
+    \end{itemize}
+}
+
+\uncover<3->{
+ 问题应用背景2
+}
+
+\end{itemize}
+
+\end{frame}
+
+\section{相关基础理论知识}
+\begin{frame}{相关基础理论知识}
+
+  \begin{definition}
+    这是连续的定义, 这是连续的定义, 这是连续的定义,
+    这是连续的定义, 这是连续的定义, 这是连续的定义,
+    这是连续的定义, 这是连续的定义, 这是连续的定义.
+  \end{definition}
+\end{frame}
+
+\begin{frame}{ 相关基础理论知识}
+  \begin{theorem}[中值定理]
+    这是中值定理, 这是中值定理, 这是中值定理, 这是中值定理,
+    这是中值定理, 这是中值定理, 这是中值定理, 这是中值定理,
+    这是中值定理, 这是中值定理, 这是中值定理, 这是中值定理,
+    这是中值定理, 这是中值定理, 这是中值定理, 这是中值定理.
+  \end{theorem}
+\end{frame}
+
+\section{基于滑模控制算法进行建模}
+\begin{frame}{基于滑模控制算法进行建模}
+\begin{itemize}
+  \item 基本思想
+  \begin{itemize}
+    \item xxxxxx
+    \item xxxxxx
+  \end{itemize}
+  \bigskip
+
+  \item 主要优点
+  \begin{itemize}
+    \item  xxxx
+    \item  xxxxx
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{算法 1}
+
+  算法 1
+
+\end{frame}
+
+
+\section{MATLAB仿真实验结果}
+
+\begin{frame}{MATLAB仿真实验结果}
+
+\begin{center}
+{Numerical results for Example 1}\smallskip
+
+\begin{tabular}{ccccccccccc} \toprule
+    &&&\multicolumn{2}{c}{GMRES(C)}
+    &&\multicolumn{2}{c}{GMRES(L)}
+    &&\multicolumn{2}{c}{GMRES(P)} \\ \cmidrule{4-5}\cmidrule{7-8}\cmidrule{10-11}
+ $\theta$ & $N$ && Iter & CPU && Iter & CPU && Iter & CPU \\\hline
+  0.5
+ & $2^{11}$ &&  33&    0.04 &&  13&    0.02 &&  12&   0.01 \\
+ & $2^{12}$ &&  33&    0.12 &&  14&    0.04 &&  12&   0.03 \\
+ & $2^{13}$ &&  33&    0.26 &&  14&    0.09 &&  12&   0.08 \\
+ & $2^{14}$ &&  33&    0.53 &&  15&    0.19 &&  12&   0.15 \\ \midrule
+  0.8
+ & $2^{11}$ &&  33&    0.04 &&  13&    0.02 &&  12&   0.01 \\
+ & $2^{12}$ &&  33&    0.11 &&  14&    0.04 &&  12&   0.03 \\
+ & $2^{13}$ &&  33&    0.25 &&  15&    0.10 &&  12&   0.08 \\
+ & $2^{14}$ &&  33&    0.53 &&  16&    0.21 &&  12&   0.15 \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\end{frame}
+
+\section{结论与展望}
+\begin{frame}{结论与展望}
+
+   这里是结论与展望 conclusion 和 remarks
+
+\end{frame}
+
+
+\begin{frame}[c,plain]
+\begin{center}
+\Huge\color{red}\bfseries 谢\quad 谢!
+
+  Thank you!
+\end{center}
+\end{frame}
+
+\end{document}

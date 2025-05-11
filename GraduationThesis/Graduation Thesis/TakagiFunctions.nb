@@ -1,0 +1,110 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[      3395,        100]
+NotebookOptionsPosition[      2391,         73]
+NotebookOutlinePosition[      2878,         91]
+CellTagsIndexPosition[      2835,         88]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["The Takagi function: a survey", "Title",
+ CellChangeTimes->{{3.944547878820902*^9, 
+  3.944547900483774*^9}},ExpressionUUID->"02224771-bac4-ba4d-b861-\
+990a423666b5"],
+
+Cell[TextData[ButtonBox["Back",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   FrontEnd`FileName[{$RootDirectory, "D:", "Study", "SeniorOneSemester", 
+     "GraduationThesis", "Graduation Thesis"}, 
+    "WeakTangentAndLevelSetsOfTakagiFunctions.nb", CharacterEncoding -> 
+    "UTF-8"], None},
+ ButtonNote->
+  "D:\\Study\\SeniorOneSemester\\GraduationThesis\\Graduation \
+Thesis\\WeakTangentAndLevelSetsOfTakagiFunctions.nb"]], "Section",
+ CellChangeTimes->{{3.9445481513240376`*^9, 3.9445481692135105`*^9}, {
+  3.944548473803295*^9, 
+  3.9445484749236393`*^9}},ExpressionUUID->"4cdf76f5-27c5-ed40-bf10-\
+b8aa6290dbda"],
+
+Cell[CellGroupData[{
+
+Cell["\:91cd\:70b9", "Section",
+ CellChangeTimes->{
+  3.9445484843605614`*^9},ExpressionUUID->"1fe90dc7-a619-b340-83ea-\
+463fbb29ff68"],
+
+Cell["", "Text",ExpressionUUID->"554207e7-32c2-d348-99c8-3843a38e8419"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:7b80\:4ecb", "Section",
+ CellChangeTimes->{
+  3.9445482632520275`*^9},ExpressionUUID->"5be5f92f-1200-0d40-80d8-\
+f74583795bcf"],
+
+Cell["\<\
+\:8dddTakagi\:53d1\:5e03\:4ed6\:7684\:8fde\:7eed\:4f46\:5374\:5904\:5904\:4e0d\
+\:53ef\:5fae\:7684\:51fd\:6570\:7684\:7b80\:5355\:4f8b\:5b50\[LongDash]\
+\[LongDash]\:4e5f\:5c31\:662fTakagi\:51fd\:6570\:ff0c\:5df2\:7ecf\:4e00\:4e2a\
+\:591a\:4e16\:7eaa\:4e86\:ff0c\:4f46Takagi\:51fd\:6570\:4ecd\:88ab\:897f\:65b9\
+\:7684\:6570\:5b66\:5bb6\:9891\:7e41\:5730\:91cd\:65b0\:7814\:7a76\:ff0c\
+\>", "Text",
+ CellChangeTimes->{{3.944548286437069*^9, 3.9445484194319057`*^9}, {
+  3.9445485056494274`*^9, 
+  3.9445486349689255`*^9}},ExpressionUUID->"26340511-51fd-4448-82e7-\
+5691d2276c7d"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1440, 741.75},
+WindowMargins->{{-6, Automatic}, {Automatic, -6}},
+FrontEndVersion->"14.1 for Microsoft Windows (64-bit) (2024\:5e747\:670816\
+\:65e5)",
+StyleDefinitions->FrontEnd`FileName[{"Report"}, "StandardReport.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"51b3aa64-4ac9-1c46-a11a-fda5994507d1"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 172, 3, 95, "Title",ExpressionUUID->"02224771-bac4-ba4d-b861-990a423666b5"],
+Cell[751, 27, 614, 13, 68, "Section",ExpressionUUID->"4cdf76f5-27c5-ed40-bf10-b8aa6290dbda"],
+Cell[CellGroupData[{
+Cell[1390, 44, 135, 3, 54, "Section",ExpressionUUID->"1fe90dc7-a619-b340-83ea-463fbb29ff68"],
+Cell[1528, 49, 71, 0, 32, "Text",ExpressionUUID->"554207e7-32c2-d348-99c8-3843a38e8419"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1636, 54, 135, 3, 54, "Section",ExpressionUUID->"5be5f92f-1200-0d40-80d8-f74583795bcf"],
+Cell[1774, 59, 589, 10, 32, "Text",ExpressionUUID->"26340511-51fd-4448-82e7-5691d2276c7d"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

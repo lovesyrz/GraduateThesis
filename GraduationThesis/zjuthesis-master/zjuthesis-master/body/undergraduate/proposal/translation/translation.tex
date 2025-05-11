@@ -1,0 +1,331 @@
+\cleardoublepage
+
+\newrefsection
+
+\newtheorem{theorem}{定理}[section]
+\newtheorem{remark}[theorem]{评注}
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{question}[theorem]{问题}
+\newtheorem{definition}[theorem]{定义}
+\newtheorem{theoremno}{定理}
+\newcommand{\Hdim}{\mathrm{\dim_H}}
+\newcommand{\Adim}{\mathrm{\dim_A}}
+\newcommand{\Bdim}{\mathrm{\dim_B}}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\Hd}{\mathrm{d}_\mathcal{H}}
+\chapter{外文翻译}
+
+\sectionnonum{摘要}
+
+在本文中,我们研究Takagi函数及其水平集的一些性质。
+我们证明了以$a,b$为参数的Takagi函数存在大型水平集,其中$ab$为Littlewood多项式的根.。
+因而,我们证明了对某些参数$a,b$,$T_{a,b}$的函数图像的Assouad维数严格大于其上盒维数。
+特别的,我们可以找到这些图像的具有大的Hausdorff维数的弱切,其Hausdorff维数大于原图像的上盒维数。
+
+\noindent{\textbf{关键词：}Assouad维数, Littlewood多项式, Takagi函数的水平集}
+\section{简介}
+在本文中,我们研究以下函数的图像,
+$$
+T_{a,b}(x)=\sum_{n=0}^\infty a^nT(b^nx),
+$$
+其中,$a,b$是满足$a<1,b>1,ab>1$的实参数,$T:\mathbb{R}\rightarrow\mathbb{R}$是周期为1,在单位区间内如下定义的帐篷函数,
+$$
+T(x)=\begin{cases}x~~~~~~~x\in[0,\frac{1}{2}] \\ 1-x~~x\in[\frac{1}{2},1].\end{cases}
+$$
+这样的函数$T_{a,b}$就称为Takagi函数。最开始,Takagi函数指的是$T_{\frac{1}{2},2}$,
+但是我们称$T_{a,b}$为Takagi函数也不会产生异议。
+人们对此类函数图像的Hausdorff维数和盒计数维数非常感兴趣。
+对盒维数,我们从[1,第2章]与[4,定理2.4]中可知,这些函数$T_{a,b}$的图像的上盒维数可由以下公式计算得出
+$$
+B = 2 + \frac{\ln a}{\ln b} = 1 + \frac{\ln ab}{\ln b}.
+$$
+
+相比之下,这些函数的图像的Hausdorff维数更难获得,有关相关问题的最新结果,请参见[19],[5]和其中的参考文献。
+
+这篇文章的结论之一是关于某些Takagi函数的Assouad维数。在本文后续内容中,对函数$f:\mathbb{R}\rightarrow\mathbb{R}$,
+我们记以下集合为函数$f$在区间[0,1]上的图像,
+$$
+\Gamma_f=\{(x,y)\in\mathbb{R}^2:x\in[0,1],y=f(x)\}.
+$$
+
+\begin{theorem}[Assouad 维数]
+      设$a,b$为正数且其乘积$ab>1$为$k-1$阶Littlewood多项式的根,即
+      $$
+      \sum_{n=0}^{k-1}\epsilon_n(ab)^n.
+      $$
+      其中,序列$\{\epsilon_n\}_{n\in\{0,\cdots,k-1\}}$取自$\{-1,1\}$。
+      此外,如果$b$是一个大于$2$的整数,则我们有以下结论,
+      $$
+      \Adim\Gamma_{T_{a,b}}\ge1+\frac{1}{k}.
+      $$
+\end{theorem}
+
+\begin{remark}
+      事实上,这个定理的证明说明了
+      $$
+      \Adim^{1/B}\Gamma_{T_{a,b}}\ge1+\frac{1}{k},
+      $$
+      其中,$B=\frac{\ln(ab^2)}{\ln b}$,$\Adim^{1/B}$是参数为$1/B$的Assouad频谱。
+\end{remark}
+
+在本文中,我们仅关注Assouad维数。有关Assouad频谱的更多详情,请参见[10]。
+
+注意到通过保持乘积$ab$不变,并使$b$增大,对于较大的$b$,这个下界可以比上盒维数$\frac{\ln(ab^2)}{\ln b}$更大。
+例如,当我们选取参数为$a=\frac{\sqrt{5}+1}{2},b=8$,则$\overline{\Bdim}\Gamma_{T_{a,b}}\approx1.23$且
+$\Adim\Gamma_{T_{a,b}}\ge\frac{4}{3}$。
+
+定理1的一个结果是,存在Takagi函数图像的大的弱切。有关维度的概念、弱切的定义和一些基本性质的更多详情,请参阅第4节。
+
+\begin{lemma}[弱切]
+      设$a,b$如定理$1.1$所述,则存在$\Gamma_{T_{a,b}}$的一个弱切$E$,使得
+      $$
+      \Hdim E=\Adim\Gamma_{T_{a,b}}\ge\overline{\Bdim}\Gamma_{T_{a,b}}.
+      $$
+      最右侧的不等式可以是严格的。
+\end{lemma}
+
+根据图$T_{a,b}$的大型水平集的存在,可以得出定理1.1,我们认为这一结果本身就很有趣。
+
+\begin{theorem}
+      设$a.b$如定理$1.1$所述,我们也允许$ab=1$。对每一个$y\in\mathbb{R}$,我们定义以下水平集
+      $$
+      L(y) = \{x\in[0,1]:T_{a,b}(x)=y\}\times\{y\}.
+      $$
+      存在$y\in\mathbb{R}$使得
+      $$
+      \Hdim L(y)\ge\frac{1}{k}.
+      $$
+\end{theorem}
+
+将乘积$ab$作为某类代数整数的限制似乎很强。然而,只要稍加努力,我们可以证明那些代数整数在[$\frac{1}{2}$,2]中是稠密的。
+
+\begin{theoremno}
+      设$L$是代数整数的集合,这些代数整数是Littlewood多项式的根,即$x\in\mathbb{C}$
+      并存在整数$k\ge1$和一个有限序列$\epsilon_n\in\{\pm1\},n\in\{0,1,\cdots,k-1\}$使得
+      $$
+      \sum_{n=0}^{k-1}\epsilon_nx^n=0.
+      $$
+      则$L\cap[\frac{1}{2},2]$在$[\frac{1}{2},2]$中稠密。
+\end{theoremno}
+
+上述结论的证明及其一般化可参见[2,3,18]。
+
+\section{讨论与未来工作}
+在本节中,我们将介绍定理1.1与定理1.4的一些背景。我们也将提出一些与本文的结果相关的问题。
+
+\subsection{函数图像的Assouad维数}
+定理1.1涉及一些Takagi函数的Assouad维数。很自然地,我们可以考虑其它处处不可微的函数的Assouad维数,
+例如,Weierstrass函数和Wiener过程的图像。对后者,我们有以下结论([12,定理2.2])。
+
+\begin{theorem}[HY17]
+      单位区间上的Wiener过程的图像$W(\cdot)$几乎肯定具有Assouad维数$2$。
+\end{theorem}
+
+我们还未完全确定任一Takagi函数的Assouad维数。我们只是说明了Takagi函数图像的Assouad维数可能严格大于上盒维数。
+
+\begin{question}
+      对$a,b\in\mathbb{R}^+$且$ab>1$,定义$T_{a,b}$图像的Assouad维数。
+\end{question}
+
+\subsection{Takagi函数的水平集}
+有关Takagi函数水平集的更多详情,请参见[1,16]。
+注意到,如果我们设$a=0.5,b=2$,则我们能找到$T_{a,b}$的Hausdorff维数至少为0.5的水平集。
+这是精确的,参见[6]。对其他的$a,b$的值,例如$a=\frac{\sqrt{5}+1}{16},b=8$
+我们看到,我们可以找到一个Hausdorff维数至少为$\frac{1}{3}$的水平集,但我们不知道它是否精确。
+
+\begin{question}
+      Takagi函数$T_{\frac{\sqrt{5}+1}{16},8}$的水平集能达到的最大Hausdorff维数是多少？
+\end{question}
+
+\section{符号}
+\begin{enumerate}
+      \item 对一个实数$x\in\mathbb{R}$,我们用符号$x^+$来表示一个数$x+\epsilon$其中$\epsilon>0$是某个固定
+      的正数,其值可以自由选择,必要时我们会指出$\epsilon$的具体值。
+      相似的,我们用$x^-$来表示一个比$x$小但是非常接近$x$的数。
+      \item 对一个函数$f:\mathbb{R}\rightarrow\mathbb{R}$,下列集合称为其在[0,1]区间上的图像
+      $$
+      \Gamma_f=\{(x,y)\in\mathbb{R}^2:x\in[0,1],y=f(x)\}.
+      $$
+      \item 对一个实数$x$,我们用$\lfloor x\rfloor$来表示不超过$x$的最大整数。
+\end{enumerate}
+
+\section{预备知识}
+现在,我们将介绍本文中使用的一些维数的概念。我们用$N_r(F)$表示$\mathbb{R}^n$中的有界集$F$用半径为$r>0$的球的最小覆盖数。
+
+\subsection{Hausdorff维数}
+$F$的Hausdorff维数定义为
+
+$$
+\Hdim F=\inf\{s:\forall\delta>0,\exists\{U_i\}_{i=1}^\infty ~such~that~ \bigcup_iU_i\supset F, \sum_i \diam(U_i)^s<\delta\}.
+$$
+
+\subsection{上盒维数}
+$F$的上盒维数是
+$$
+\overline{\Bdim}F= \lim\limits_{r\rightarrow0} \sup\big(-\frac{\log N_r(F)}{\log r}\big).
+$$
+\subsection{Assouad维数和弱切}
+$F$的Assouad维数是
+$$
+\begin{aligned}
+      \Adim F=&\inf\{s\ge0:(\exists C>0)(\forall R>0)(\forall r\in(0,R))(\forall x\in F)\\
+      &N_r(B(x,R)\cap F)\le C\Big(\frac{R}{r}\Big)^s\}.
+\end{aligned}
+$$
+其中$B(x,R)$表示以$x$为球心,$R$为半径的闭合球。
+
+一个学习Assouad维数的重要工具是[17]中介绍的弱切和[11]中介绍的微集。下面的定义出现在[9,定义1.1]。
+
+\begin{definition}
+      设$X\in\mathcal{K}(\mathbb{R}^n)$是一个固定的参考集（通常是闭合的单位球或立方体）
+      并设$E,F\subset\mathbb{R}^n$是紧集。
+      假设存在一列相似映射$T_k:\mathbb{R}^n\rightarrow\mathbb{R}^n$使得
+      当$k\rightarrow0$时$d_\mathcal{H}(E,T_k(F)\cap X)\rightarrow0$。
+      则$E$称为$F$的一个弱切。
+\end{definition}
+
+这里$(\mathcal{K}(\mathbb{R}^n),\mathrm{d}_\mathcal{H})$是一个具有Hausdorff度量的完备的度量空间,即对于两个紧集
+$A,B\subset\mathbb{R}^n$有以下定义
+$$
+\Hd(A,B)=\inf\{\delta>0:A\subset B_\delta,B\subset A_\delta\},
+$$
+其中,对任意紧集$C\subset\mathbb{R}^n$
+$$
+C_\delta=\{x\in\mathbb{R}^n:|x-y|<\delta ~\mathrm{for~some}~ y\in C\}.
+$$
+
+引理1.3是定理1.1和以下结果的直接结论,见[15,命题5.7]。
+
+\begin{theorem}[KOR]
+      设$F$是满足$\Adim F=s$的紧集。则存在$F$的一个弱切$E$使得
+      $$
+      \Hdim E=s.
+      $$
+      换言之,我们有
+      $$
+      \Adim F=\max\{\Hdim E:E~\mathrm{is~a~weak~tangent~of}~F \}.
+      $$
+\end{theorem}
+\subsection{由不相邻的立方体覆盖}
+为了方便,在本文中我们将用不相邻的方格而非球来计算覆盖数。
+对$a\in\mathbb{R}^2,R>0$,我们用$S(a,R)$表示以$a$为中心,边长为$2R$的正方形,其边平行于坐标轴。
+因为我们处理的是函数图像,所以坐标轴的选择是自然的。
+我们表示以下覆盖数,
+$$
+\begin{aligned}
+      N(F\cap S(a,R),r)=&|\{(i,j)\in\mathbb{Z}^2\cap[0,\lfloor\frac{R}{r}\rfloor+1]^2:\\
+      &S((a-\frac{R}{2}+\frac{r}{2}+ir,a-\frac{R}{2}+\frac{r}{2}+jr),r)\cap F\neq\emptyset\}|.
+\end{aligned}
+$$
+
+这相当于$N_r(F\cap B(a,R))$,因为存在一个常数$C>0$,
+使得对于所有的$a\in F,0<r<R<1$,我们都有以下不等式,
+$$
+C^{-1}N_r(F\cap B(a,R))\le N(F\cap S(a,R),r) \le CN_r(F\cap B(a,R)).
+$$
+
+\subsection{Takagi函数的一些性质}
+在本文中,我们会使用以下结论,其证明在[13]中,且我们使用[4,定理2.4]中给出的版本。
+
+\begin{lemma}
+      设$T:\mathbb{R}\rightarrow\mathbb{R}$是连续分段的$C^1$且为周期函数。则以下函数
+      $$
+      T_{a,b}(x)=\sum_{n=0}^\infty a^nT(b^nx)
+      $$
+      一定满足以下两个性质之一,
+
+      $1:$ $T_{a,b}$是分段$C^1$的。
+
+      $2:$ 对一个正常数$C>0$以及任意区间$J\subset\mathbb{R}$,我们有以下不等式，
+      $$
+      \underset{x,y\in J}{\sup}|T_{a,b}(x)-T_{a,b}(y)|\ge C|J|^{-\frac{\ln a}{\ln b}}.
+      $$
+
+\end{lemma}
+
+注意到如果$a<1,ab>1$,则有$-\frac{\ln a}{\ln b}\in(0,1)$。并且我们注意到,如果$|J|<1$则有
+$$
+\underset{x,y\in J}{\sup}|T_{a,b}(x)-T_{a,b}(y)|\ge C|J|.
+$$
+
+\begin{remark}
+      当$T$是在第一节开始定义的帐篷函数时,
+      众所周知,当$a<1,ab\ge1$时,函数$T_{a,b}$是处处不可微的,
+      因此引理$4.3$中仅有第二个性质是对的。
+\end{remark}
+
+\section{大型水平集,定理1.4的证明}
+
+我们证明具有特定参数$a,b,$的函数$T_{a,b}$存在大型水平集。
+因为$ab$是Littlewood多项式的一个根,我们可以得到
+$$
+\sum_{i=0}^k\epsilon_i(ab)^i=0.
+$$
+其中,$k\ge1$为整数,和$\epsilon_i\in\{\pm1\}$的某个选择。
+接下来我们考虑前$k$项的部分和
+$$
+F_1(x)=\sum_{i=0}^{k-1}a^nT(b^nx).
+$$
+对于整数$m$,上述函数的导数在点$x=mb^{-k}$处不连续。
+现在让我们假设$x$是一个无理数,则上述函数的导数为
+$$
+F_1^\prime(x)=\sum_{i=0}^{k-1}\epsilon_i(x)(ab)^i.
+$$
+其中$\epsilon_i(x)\in\{\pm1\}$取决于x的b级数展开。特别的,如果
+$$
+x=0.b_1b_2\cdots
+$$
+则
+$$
+\epsilon_i(x)=\begin{cases}1~~~~b_i\in[0,\frac{b}{2}]\\-1~~~b_i\in(\frac{b}{2},1].\end{cases}
+$$
+因此,我们可以找到至少两个不相邻的长度为$\frac{1}{2b^{k-1}}$的区间,在这两个区间上$F_1^\prime(x)=0$
+且$F_1(x)=a_1$是一个常数$a_1\ge0$。
+事实上,当
+$$
+\sum_{i=0}^{k-1}\epsilon_i(ab)^i=0.
+$$
+我们也有
+$$
+-\sum_{i=0}^{k-1}\epsilon_i(ab)^i=0.
+$$
+因此我们至少可以找到两个区间并且它们是关于$\{x=0.5\}$对称的。
+又由于$F_1$本身也是关于$\{x=0.5\}$对称的,我们可以得到$F_1(\cdot)$会在这两个区间上取相同的值,
+我们把这两个区间称为$I_1,I_2$。
+
+我们考虑接下来的$k$项的和
+$$
+F_2(x)=\sum_{n=k}^{2k-1}a^nT(b^nx).
+$$
+则我们可以在$I_1,I_2$中找到b个长度为$\frac{1}{2b^{2k-1}}$的区间,
+使得在这些区间上,上述和保持不变为$a_2\ge0$。
+要看到这一点,考虑$I_1$,其长度为$\frac{1}{2b^k}$。现在观察以下函数
+$$
+F_2(x)=\sum_{n=k}^{2k-1}a^nT(b^nx)=\sum_{n=0}^{k-1}a^{n+k}T(b^kb^nx)=a^kF_1(b^kx).
+$$
+因此,$F_2$的图像是一个$F_1$图像的仿射复制,或者直观地说,是一个缩小的版本。
+然后我们看到,在$I_1$中正好有$b$个长度为$\frac{1}{2b^{2k-1}}$的区间,
+使得在这些区间上,$F_2$的取值为$a_2$。
+事实上,在任意形如$[\frac{l}{b^{k-1}},\frac{l+1}{b^{k-1}}]$的区间上,
+$F_2$的图像都有$2b$个相同级别的平台。
+也就是说,我们可以找到$2b$个长度为$\frac{1}{2b^{k-1}}$的区间,在这些区间上,$F_2(x)=a_2$。
+因为$I_1$只是一个长度为$\frac{1}{b^{k-1}}$一半的区间,因此我们可以在区间$I_1$上找到$b$个平台。
+这里我们使用了$F_2$的镜像对称性。
+
+对每一个$j\ge2$,我们可以将上述论点应用于第$j$个$k$项的部分和,
+因此,我们可以找到一个Cantor集$C$,使得对一个常数$c$,
+$T_{a,b}(C)=\{c\}$。通过构造,该Cantor集可如下获得,
+我们首先取两个长度为$\frac{1}{2b^{k-1}}$的区间$I_1,I_2$,
+然后在这两个区间内放置$b$个长度为$\frac{1}{2b^{2k-1}}$的区间。
+然后,在这些长度为$\frac{1}{2b^{2k-1}}$的区间内,我们再放置$b$个长度为$\frac{1}{2b^{3k-1}}$的区间。
+这个过程会无限期地进行,并且自相似（就像中三分之一Cantor集的构造一样）。
+因此,最终得到的Cantor集是一个自相似的满足开集条件的集合,其Hausdorff维数是$\frac{1}{k}$
+（收缩比为$\frac{1}{b^k}$,分枝数为$b$,例如，参见[7,定理9.3]）。
+这样,我们就证明了定理1.4。
+\section{压缩与计数，定理1.1的证明}
+略
+\nocite{*}
+\begingroup
+    \linespreadsingle{}
+    \printbibliography[title={外文翻译参考文献}]
+\endgroup

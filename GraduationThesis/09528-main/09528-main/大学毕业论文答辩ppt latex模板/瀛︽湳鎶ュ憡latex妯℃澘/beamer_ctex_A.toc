@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{课题背景}{4}{0}{1}
+\beamer@sectionintoc {2}{相关基础理论知识}{7}{0}{2}
+\beamer@sectionintoc {3}{基于滑模控制算法进行建模}{10}{0}{3}
+\beamer@sectionintoc {4}{MATLAB仿真实验结果}{13}{0}{4}
+\beamer@sectionintoc {5}{结论与展望}{15}{0}{5}
