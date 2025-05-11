@@ -1,0 +1,88 @@
+%{\tiny }%# -*- coding:utf-8 -*-
+\documentclass[10pt,aspectratio=169,mathserif]{beamer}
+%设置为 Beamer 文档类型，设置字体为 10pt，长宽比为16:9，数学字体为 serif 风格
+
+%%%%-----导入宏包-----%%%%
+\usepackage{zju}			%导入 zju 模板宏包
+\usepackage{ctex}			%导入 ctex 宏包，添加中文支持
+\usepackage{amsmath,amsfonts,amssymb,bm}   %导入数学公式所需宏包
+\usepackage{color}			 %字体颜色支持
+\usepackage{graphicx,hyperref,url}
+\usepackage{metalogo}	% 非必须
+%% 上文引用的包可按实际情况自行增删
+%%%%%%%%%%%%%%%%%%
+\usepackage{fontspec}
+\usepackage{xeCJK}
+% \setCJKmainfont{Source Han Sans SC}
+
+
+
+\beamertemplateballitem		%设置 Beamer 主题
+
+%%%%------------------------%%%%%
+\catcode`\。=\active         %或者=13
+\newcommand{。}{．}
+%将正文中的“。”号转换为“.”。中文标点国家规范建议科技文献中的句号用圆点替代
+%%%%%%%%%%%%%%%%%%%%%
+
+%%%%----首页信息设置----%%%%
+\title[ 分形函数水平集的基本性质]{分形函数水平集的基本性质}
+\subtitle{——从Takagi函数到广义的Takagi函数}
+%%%%----标题设置
+
+
+\author[Kangjie Lou]{
+  楼康杰 \\\medskip
+  指导老师：阮火军
+  }
+%%%%----个人信息设置
+
+\institute[IOPP]{
+  数学科学学院 \\
+  浙江大学}
+%%%%----机构信息
+
+\date[May 16 2025]{
+  2025年5月16日}
+%%%%----日期信息
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}				%生成标题页
+
+	\section{提纲}
+	\begin{frame}
+		\frametitle{提纲}
+		\tableofcontents
+	\end{frame}				%生成提纲页
+
+
+	\section{Takagi函数及其水平集的性质}
+	\begin{frame}[plain]
+		\frametitle{Takagi函数}
+		\begin{theorem}[Takagi函数]
+			定义以下函数$T_{a,b}(x)$为Takagi函数，
+			$$
+				T_{a,b}(x)=\sum_{n=0}^\infty a^nT(b^nx),
+			$$
+			其中$0<a<1,b>1$，$T(x):\mathbb{R}\rightarrow\mathbb{R}$周期为$1$，在区间$[0,1]$上定义如下：
+			$$
+				T(x)=\begin{cases}
+					x~~~~~~,x\in[0,\frac{1}{2}],\\
+					1-x~,x\in[\frac{1}{2},1].
+				\end{cases}
+			$$
+		\end{theorem}
+
+		\begin{theorem}[水平集]
+			函数$f:[0,1]\rightarrow\mathbb{R}$在$f(x)=y$时的水平集定义为
+			$$
+				L(y)=\{x\in[0,1]:f(x)=y\}\times\{y\}.
+			$$
+		\end{theorem}
+	\end{frame}
+
+
+\end{document}
